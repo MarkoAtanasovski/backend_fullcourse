@@ -1,0 +1,67 @@
+### GET /
+GET http://localhost:5000
+
+### Register a user /auth/register
+
+POST http://localhost:5000/auth/register
+Content-Type: application/json
+
+{
+  "username": "alex1111@gmail.com",
+  "password": "1233215"
+}
+
+### Login a user /auth/login
+
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{
+  "username": "alex111@gmail.com",
+  "password": "123321"
+}
+
+### FETCH ALL TODOS (protected)
+
+GET http://localhost:5000/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzYwNTUyNjQ1LCJleHAiOjE3NjA2MzkwNDV9.UOCe7cnPPPFmyv2zbWpfJlCapOsz7wYlj0J2ojz39eE
+
+### Create a new todo 
+POST http://localhost:5000/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzYwNTUyNjQ1LCJleHAiOjE3NjA2MzkwNDV9.UOCe7cnPPPFmyv2zbWpfJlCapOsz7wYlj0J2ojz39eE
+
+Content-Type: application/json
+
+{
+  "task": "Finish coding the project. Finished"
+}
+
+### Fetch all todos GET / TODOS (protected)
+GET http://localhost:5000/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzYwNTUyNjQ1LCJleHAiOjE3NjA2MzkwNDV9.UOCe7cnPPPFmyv2zbWpfJlCapOsz7wYlj0J2ojz39eE
+
+### Create a new todo post / todos
+POST http://localhost:5000/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzYwNTUyNjQ1LCJleHAiOjE3NjA2MzkwNDV9.UOCe7cnPPPFmyv2zbWpfJlCapOsz7wYlj0J2ojz39eE
+Content-Type: application/json
+
+{
+  "task": "Finished this part"
+}
+
+### Update a todo PUT / TODOS / :ID (protected)
+PUT http://localhost:5000/todos/2?page=4
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzYwNTUyNjQ1LCJleHAiOjE3NjA2MzkwNDV9.UOCe7cnPPPFmyv2zbWpfJlCapOsz7wYlj0J2ojz39eE
+Content-Type: application/json
+
+{
+  "completed": 1
+}
+
+### DELETE a todo DELETE / TODOS / :ID (protected)
+DELETE http://localhost:5000/todos/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzYwNTUyNjQ1LCJleHAiOjE3NjA2MzkwNDV9.UOCe7cnPPPFmyv2zbWpfJlCapOsz7wYlj0J2ojz39eE
+
+
+
+

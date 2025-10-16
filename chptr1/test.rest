@@ -1,0 +1,25 @@
+### TEST GET GET / WEBSITE
+
+GET http://localhost:8383
+
+
+### TESG GET / dashboard
+
+GET http://localhost:8383/dashboard
+
+### TEST DATA ENDPOINT
+
+GET http://localhost:8383/api/data
+
+### DATA ENPOINT FOR ADDING USER
+
+POST http://localhost:8383/api/data
+Content-Type: application/json
+
+{
+    "name": "ALEX"
+}
+
+### DELETE ENDPOINT
+
+DELETE http://localhost:8383/api/data
